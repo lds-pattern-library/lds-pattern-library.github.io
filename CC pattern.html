@@ -14,6 +14,21 @@
       padding: 0;
       background-color: #f4f4f9;
     }
+  #homeButton {
+		background-color: white;
+		color: #007bff;
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-right: 1rem;
+	}
+
+	#homeButton:hover {
+		background-color: #0056b3;
+		color: white;
+	}
 	input {
 	  padding: 0.5rem;
 	  font-size: 1rem;
@@ -90,6 +105,7 @@
 </head>
 <body>
   <header >
+	<button id="homeButton" onClick="changePage('/')">Home</button>	
 	<div >LDS CC Pattern</div>
 	<div ><input type="text" placeholder="Your name" id="username"></input></div>
 
@@ -4287,6 +4303,11 @@
         taskContainer.appendChild(taskCard);
       });
     }
+	
+	function changePage(path)
+	{
+		window.open(path);
+	}
 	
 	function commentHandler(comment_type,data)
 	{
